@@ -1063,6 +1063,7 @@ int		main(void)
 			printf("Test fail while trying to create list component with NULL\n");
 		}
 		list = ft_lstnew(&a, sizeof(a));
+		a = 0;
 		if (!list || memcmp(list->content, &a, sizeof(a)) != 0 || list->content_size != sizeof(a))
 		{
 			c++;
@@ -1083,6 +1084,7 @@ int		main(void)
 		ft_lstadd(NULL, list2);
 		ft_lstadd(&nullist, list2);
 		ft_lstadd(&list, list2);
+		b = 0;
 		if (!list || list->next != prev)
 			c++;
 		prnt_c(&c);
