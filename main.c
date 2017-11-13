@@ -1054,6 +1054,7 @@ int		main(void)
 	print_test_name("01. ft_lstnew");
 	{
 		int a;
+		int b;
 
 		a = 43;
 		list = ft_lstnew(NULL, 25);
@@ -1064,10 +1065,11 @@ int		main(void)
 		}
 		list = ft_lstnew(&a, sizeof(a));
 		a = 0;
-		if (!list || memcmp(list->content, &a, sizeof(a)) != 0 || list->content_size != sizeof(a))
+		b = 43;
+		if (!list || memcmp(list->content, &b, sizeof(b)) != 0 || list->content_size != sizeof(b))
 		{
 			c++;
-			printf("Test fail while trying to create list component with %d\n", a);
+			printf("Test fail while trying to create list component with %d\n", b);
 			printf("%d\n", (int)(list->content));
 		}
 		prnt_c(&c);
@@ -1084,7 +1086,6 @@ int		main(void)
 		ft_lstadd(NULL, list2);
 		ft_lstadd(&nullist, list2);
 		ft_lstadd(&list, list2);
-		b = 0;
 		if (!list || list->next != prev)
 			c++;
 		prnt_c(&c);
