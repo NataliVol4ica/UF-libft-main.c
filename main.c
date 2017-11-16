@@ -732,9 +732,11 @@ int		main(void)
 		c += ft_atoi_check("9223372036854775806");
 		c += ft_atoi_check("9223372036854775807");
 		c += ft_atoi_check("9223372036854775808");
+		c += ft_atoi_check("9223372036854775809");
 		c += ft_atoi_check("-9223372036854775807");
 		c += ft_atoi_check("-9223372036854775808");
 		c += ft_atoi_check("-9223372036854775809");
+		c += ft_atoi_check("-9223372036854775810");
 		c += ft_atoi_check("21");
 		c += ft_atoi_check("--21");
 		c += ft_atoi_check("+21");
